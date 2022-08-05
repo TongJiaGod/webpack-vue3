@@ -8,7 +8,7 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'airbnb-base',
   ],
-  parser: "vue-eslint-parser",
+  parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
