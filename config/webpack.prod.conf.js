@@ -11,7 +11,7 @@ module.exports = merge(config,{
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].[chunkhash].css',
-            chunkFilename: 'js/[name].[chunkhash].js',
+            chunkFilename: 'css/[name].[chunkhash].js',
         }),
         new CopyPlugin({
             patterns: [
