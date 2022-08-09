@@ -22,6 +22,11 @@ module.exports = merge(config,{
           fix: true,
           extensions: ['ts','js', 'vue', 'tsx', 'jsx']
         })
-    ]
+    ],
+    performance: {
+        hints: 'warning',
+        maxAssetSize: 100000,
+        maxEntrypointSize: 400000,
+  },
 })
 
