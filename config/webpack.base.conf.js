@@ -12,7 +12,8 @@ module.exports = {
   },
   output: {
     path: resolve('dist'),
-    filename: 'js/[name][fullhash].js',
+    filename: 'js/[name].[chunkhash].js',
+    chunkFilename: 'js/[name].[chunkhash].js',
     clean: true,
   },
   resolve: {
@@ -83,7 +84,7 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
       minSize: 20000,
-      minChunks: 2,
+      minChunks: 1,
       maxAsyncRequests: 30,
       maxInitialRequests: 30,
       enforceSizeThreshold: 50000,
