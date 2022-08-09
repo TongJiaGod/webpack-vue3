@@ -10,7 +10,8 @@ module.exports = merge(config,{
     mode: 'production',
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/[name].[fullhash].css',
+            filename: 'css/[name].[chunkhash].css',
+            chunkFilename: 'js/[name].[chunkhash].js',
         }),
         new CopyPlugin({
             patterns: [
