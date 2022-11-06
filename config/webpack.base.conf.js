@@ -95,7 +95,7 @@ module.exports = {
           reuseExistingChunk: true,
         },
         common: {
-          minChunks: 2,
+          minChunks: 1,
           priority: -20,
           reuseExistingChunk: true,
         },
