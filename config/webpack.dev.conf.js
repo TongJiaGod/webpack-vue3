@@ -12,4 +12,9 @@ module.exports = merge(config,{
         compress: true,
         port: 8080,
       },
+      cache: {
+        type: 'filesystem',
+        config: [__filename],
+        store: 'pack',
+      }
 })
