@@ -4,3 +4,4 @@ dist
 public
 .eslintrc.js
 postcss.config.js
+babel.config.js
