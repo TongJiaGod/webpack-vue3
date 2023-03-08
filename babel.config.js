@@ -5,6 +5,7 @@ module.exports = {
         {
           useBuiltIns: 'usage', // 按需引入 polyfill
           corejs: 3,
+          modules: false
         },
       ],
       [
@@ -15,5 +16,13 @@ module.exports = {
       ],
     ],
     plugins: [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                corejs: false,
+                helpers: true,
+                regenerator: false
+            }
+        ]
     ],
   }

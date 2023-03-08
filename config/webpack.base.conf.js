@@ -12,8 +12,7 @@ module.exports = {
   },
   output: {
     path: resolve('dist'),
-    filename: 'js/[name].[chunkhash].js',
-    chunkFilename: 'js/[name].[chunkhash].js',
+    filename: '[name].js',
     clean: true,
   },
   resolve: {
@@ -31,12 +30,15 @@ module.exports = {
       {
         test: /\.(j|t)sx?$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        include: resolve('src'),
+        options: {
+            cacheDirectory: true
+        }
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+          isProd ? MiniCssExtractPlugin.loader : 'vue-style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -80,26 +82,4 @@ module.exports = {
         '__VUE_PROD_DEVTOOLS__': false
     })
   ],
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      minSize: 20000,
-      minChunks: 1,
-      maxAsyncRequests: 30,
-      maxInitialRequests: 30,
-      enforceSizeThreshold: 50000,
-      cacheGroups: {
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          reuseExistingChunk: true,
-        },
-        common: {
-          minChunks: 1,
-          priority: -20,
-          reuseExistingChunk: true,
-        },
-      },
-    },
-  },
 };

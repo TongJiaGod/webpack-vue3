@@ -14,7 +14,31 @@ module.exports = merge(config,{
       },
       cache: {
         type: 'filesystem',
-        config: [__filename],
+        buildDependencies: {
+            config: [__filename],
+          },
         store: 'pack',
-      }
+      },
+      optimization: {
+        splitChunks: {
+          chunks: 'async',
+          minSize: 20000,
+          minChunks: 1,
+          maxAsyncRequests: 30,
+          maxInitialRequests: 30,
+          enforceSizeThreshold: 50000,
+          cacheGroups: {
+            vendors: {
+              test: /[\\/]node_modules[\\/]/,
+              priority: -10,
+              reuseExistingChunk: true,
+            },
+            common: {
+              minChunks: 2,
+              priority: -20,
+              reuseExistingChunk: true,
+            },
+          },
+        },
+      },
 })
