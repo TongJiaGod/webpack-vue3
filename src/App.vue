@@ -3,7 +3,8 @@
 </template>
 
 <style>
-html,body {
+html,
+body {
     height: 100%;
 }
 #app {

@@ -1,7 +1,5 @@
 <template>
-    <footer>
-        尾部
-    </footer>
+    <footer>尾部</footer>
 </template>
 
 <style lang="scss" scoped>

@@ -1,7 +1,5 @@
 <template>
-    <nav>
-        菜单
-    </nav>
+    <nav>菜单</nav>
 </template>
 
 <style lang="scss" scoped>

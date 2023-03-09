@@ -1,7 +1,5 @@
 <template>
-    <header>
-        头部
-    </header>
+    <header>头部</header>
 </template>
 
 <style lang="scss" scoped>
