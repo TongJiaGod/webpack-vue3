@@ -23,18 +23,7 @@ module.exports = {
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/ban-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
-        'prettier/prettier': [
-            'error',
-            {
-                singleQuote: true, // 使用单引号
-                semi: false, // 末尾添加分号
-                tabWidth: 4,
-                trailingComma: 'none',
-                useTabs: false,
-                endOfLine: 'auto'
-            }
-        ]
+        '@typescript-eslint/no-var-requires': 'off'
     },
     globals: {
         defineOptions: 'readonly'
