@@ -10,6 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = merge(config, {
     mode: 'production',
+    devtool: false,
     output: {
         path: resolve('dist'),
         filename: 'js/[name].[chunkhash].js',
